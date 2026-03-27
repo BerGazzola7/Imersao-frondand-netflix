@@ -1,0 +1,231 @@
+/* Variáveis CSS para Dark Mode */
+body.dark-mode {
+    --bg-color: #141414;
+    --text-color: #ffffff;
+    --secondary-text: #b3b3b3;
+    --border-color: #C0C0C0;
+}
+
+/* Variáveis CSS para Light Mode */
+body.light-mode {
+    --bg-color: #f5f5f5;
+    --text-color: #1a1a1a;
+    --secondary-text: #666666;
+    --border-color: #333333;
+}
+
+/* Variáveis padrão (Dark Mode) */
+:root {
+    --bg-color: #141414;
+    --text-color: #ffffff;
+    --secondary-text: #b3b3b3;
+    --border-color: #C0C0C0;
+}
+
+body {
+    /* Cor de fundo escura, característica da Netflix */
+    background-color: var(--bg-color);
+    /* Cor do texto, branca para melhor contraste */
+    color: var(--text-color);
+    /* Tipo de fonte moderna, com fallback para Arial */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    /* Remove margem padrão do body */
+    margin: 0;
+    /* Remove preenchimento padrão do body */
+    padding: 0;
+    /* Flex para centralizar o conteúdo */
+    display: flex;
+    /* Centraliza horizontalmente os itens */
+    justify-content: center;
+    /* Centraliza verticalmente os itens */
+    align-items: center;
+    /* Altura total da tela (100% da viewport height) */
+    height: 100vh;
+    /* Transição suave entre temas */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+main {
+    /* Alinha o texto ao centro */
+    text-align: center;
+    /* Limita a largura máxima do conteúdo */
+    max-width: 800px;
+    /* Ocupa 100% da largura disponível */
+    width: 100%;
+}
+
+header h1 {
+    /* Tamanho grande da fonte para destaque */
+    font-size: 3rem;
+    /* Espaço abaixo do título */
+    margin-bottom: 0.5rem;
+    /* Cor branca para o título */
+    color: var(--text-color);
+}
+
+header p {
+    /* Tamanho menor da fonte para o subtítulo */
+    font-size: 1.2rem;
+    /* Cor cinzenta mais suave para texto secundário */
+    color: var(--secondary-text);
+    /* Espaço abaixo do parágrafo */
+    margin-bottom: 3rem;
+}
+
+.profiles {
+    /* Flex para distribuir os perfis em linha */
+    display: flex;
+    /* Centraliza horizontalmente os perfis */
+    justify-content: center;
+    /* Espaço entre cada perfil */
+    gap: 2rem;
+    /* Remove os pontos padrão da lista */
+    list-style: none;
+    /* Remove padding padrão da lista */
+    padding: 0;
+    /* Remove margem padrão da lista */
+    margin: 0;
+}
+
+.profile button {
+    /* Remove o fundo padrão do botão */
+    background: none;
+    /* Remove a borda padrão do botão */
+    border: none;
+    /* Muda o cursor para apontar quando passa o mouse */
+    cursor: pointer;
+    /* Transição suave para a animação de escala */
+    transition: transform 0.2s;
+}
+
+.profile button:hover {
+    /* Aumenta 5% o tamanho do elemento quando o mouse passa */
+    transform: scale(1.05);
+}
+
+.profile figure {
+    /* Remove a margem padrão da figura */
+    margin: 0;
+    /* Alinha o conteúdo ao centro */
+    text-align: center;
+}
+
+.profile img {
+    /* Largura fixa para a imagem */
+    width: 150px;
+    /* Altura fixa para a imagem */
+    height: 150px;
+    /* Torna a imagem circular */
+    border-radius: 50%;
+    /* Garante que a imagem preecha o espaço sem distorcer */
+    object-fit: cover;
+    /* Borda transparente que ficará visível no hover */
+    border: 3px solid transparent;
+    /* Transição suave para a cor da borda */
+    transition: border-color 0.2s;
+}
+
+.profile img:hover {
+    /* Muda a cor da borda para cinza claro no hover */
+    border-color: var(--border-color);
+}
+
+.profile figcaption {
+    /* Espaço acima da legenda */
+    margin-top: 1rem;
+    /* Tamanho ligeiramente aumentado para a legenda */
+    font-size: 1.1rem;
+    /* Texto branco para a legenda */
+    color: var(--text-color);
+}
+
+/* Estilos para o botão de alternância de tema */
+.theme-toggle {
+    /* Posicionamento absoluto no canto superior direito */
+    position: fixed;
+    /* Distância do topo */
+    top: 20px;
+    /* Distância da direita */
+    right: 20px;
+    /* Padding interno */
+    padding: 14px 24px;
+    /* Fonte */
+    font-size: 1.3rem;
+    /* Borda arredondada */
+    border-radius: 25px;
+    /* Remove borda padrão */
+    border: 3px solid var(--text-color);
+    /* Cor de fundo */
+    background-color: var(--bg-color);
+    /* Cor do texto */
+    color: var(--text-color);
+    /* Cursor de ponteiro */
+    cursor: pointer;
+    /* Transição suave */
+    transition: all 0.3s ease;
+    /* Z-index para ficar acima de outros elementos */
+    z-index: 10;
+    /* Fonte em negrito */
+    font-weight: bold;
+}
+
+.theme-toggle:hover {
+    /* Animação de escala no hover */
+    transform: scale(1.1);
+    /* Muda a cor de fundo no hover */
+    background-color: var(--text-color);
+    /* Muda a cor do texto no hover */
+    color: var(--bg-color);
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .profiles {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    ul {
+        gap: 4 rem;
+        /* Centraliza os itens verticalmente */
+        align-items: center;
+    }
+
+    .profile img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile figcaption {
+        font-size: 1rem;
+    }
+
+    .theme-toggle {
+        /* Botão maior em dispositivos móveis */
+        top: 15px;
+        right: 15px;
+        padding: 10px 16px;
+        font-size: 1.1rem;
+    }
+}
+
+/* Responsividade para tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .profiles {
+        gap: 1.5rem;
+    }
+
+    .profile img {
+        width: 120px;
+        height: 120px;
+    }
+}

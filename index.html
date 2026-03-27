@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="theme.js" defer></script>
+</head>
+
+<body class="dark-mode">
+    <button id="theme-toggle-btn" class="theme-toggle" onclick="toggleTheme()" aria-label="Alternar tema">
+        ☀️ Light Mode
+    </button>
+    <main>
+        <header>
+            <h1>Quem está assistindo?</h1>
+            <p>Escolha um perfil para continuar</p>
+        </header>
+
+        <section aria-label="Lista de perfis">
+            <ul class="profiles">
+                <li class="profile">
+                    <a href="netflix-plataform-main/netflix-plataform-main/catalogo/catalogo.html"
+                        aria-label="Selecionar Perfil 1">
+                        <figure>
+                            <img src="/assets/perfil-1.jpg" alt="..." loading="lazy">
+                            <figcaption>Bernardo</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="profile">
+                    <a href="netflix-plataform-main/netflix-plataform-main/catalogo/catalogo.html"
+                        aria-label="Selecionar Perfil 2">
+                        <figure>
+                            <img src="/assets/perfil-2.jpg" alt="..." loading="lazy">
+                            <figcaption>Alexis</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="profile">
+                    <a href="netflix-plataform-main/netflix-plataform-main/catalogo/catalogo.html"
+                        aria-label="Selecionar Perfil 3">
+                        <figure>
+                            <img src="/assets/perfil-3.jpg" alt="..." loading="lazy">
+                            <figcaption>Andrea</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="profile">
+                    <a href="netflix-plataform-main/netflix-plataform-main/catalogo/catalogo.html"
+                        aria-label="Selecionar Perfil 4">
+                        <figure>
+                            <img src="/assets/perfil-4.jpg" alt="..." loading="lazy">
+                            <figcaption>Livia</figcaption>
+                        </figure>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>
